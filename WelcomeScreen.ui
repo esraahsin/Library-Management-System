@@ -1,0 +1,373 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>800</width>
+    <height>600</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <widget class="QWidget" name="centralwidget"/>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>800</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menuACCEUIL">
+    <property name="title">
+     <string>ACCEUIL</string>
+    </property>
+   </widget>
+   <widget class="QMenu" name="menuGestion_des_tudiants">
+    <property name="title">
+     <string>Gestion des étudiants</string>
+    </property>
+    <widget class="QMenu" name="menuMise_jour_des_tudiants">
+     <property name="title">
+      <string>Mise à jour des étudiants</string>
+     </property>
+     <widget class="QMenu" name="menuSupprimer_un_tudiant">
+      <property name="title">
+       <string>Supprimer un étudiant </string>
+      </property>
+      <addaction name="actionSuppression_tudiant_donn"/>
+      <addaction name="actionSuppression_des_tudiants_d_une_section_donn_e"/>
+      <addaction name="actionSuppression_des_tudiants_d_un_niveau_donn"/>
+      <addaction name="actionSuppression_des_tudiants_d_une_section_et_un_niveau"/>
+     </widget>
+     <widget class="QMenu" name="menuModifier_un_tudiant">
+      <property name="title">
+       <string>Modifier un étudiant </string>
+      </property>
+      <addaction name="actionT_l_phone"/>
+      <addaction name="actionmail"/>
+      <addaction name="actionAdresse"/>
+     </widget>
+     <addaction name="separator"/>
+     <addaction name="actionNew"/>
+     <addaction name="menuSupprimer_un_tudiant"/>
+     <addaction name="menuModifier_un_tudiant"/>
+    </widget>
+    <widget class="QMenu" name="menuRecherche_et_Affichage">
+     <property name="title">
+      <string>Recherche et Affichage </string>
+     </property>
+     <addaction name="action1_Contenu_du_dictionnaire_tudiants"/>
+     <addaction name="action2_Recherche_par_num_ro_inscription"/>
+     <addaction name="action3_Recherche_par_section"/>
+     <addaction name="action4_Recheche_par_section_et_niveau"/>
+     <addaction name="action5_Rcherche_par_niveau"/>
+    </widget>
+    <addaction name="separator"/>
+    <addaction name="menuMise_jour_des_tudiants"/>
+    <addaction name="menuRecherche_et_Affichage"/>
+   </widget>
+   <widget class="QMenu" name="menuGestion_des_livres">
+    <property name="title">
+     <string>Gestion des livres </string>
+    </property>
+    <widget class="QMenu" name="menuMise_jour">
+     <property name="title">
+      <string>Mise à jour </string>
+     </property>
+     <widget class="QMenu" name="menuSupprimer">
+      <property name="title">
+       <string>Supprimer </string>
+      </property>
+      <addaction name="actionSuppression_livre_donn"/>
+      <addaction name="actionSuppression_livres_d_un_auteur_donn"/>
+      <addaction name="actionSuppression_livres_d_une_ann_e_donn_e"/>
+     </widget>
+     <addaction name="actionAjouter_un_nouvel_livre"/>
+     <addaction name="menuSupprimer"/>
+     <addaction name="actionModifier_nombre_d_exemplaires_d_un_livre"/>
+    </widget>
+    <widget class="QMenu" name="menuRecherche_et_Affichage_2">
+     <property name="title">
+      <string>Recherche et Affichage </string>
+     </property>
+     <addaction name="action1_Contenu_du_dictionnaire_LIVRE"/>
+     <addaction name="action2_Recherche_par_R_f_rence"/>
+     <addaction name="action3_Recherche_par_titre"/>
+     <addaction name="action4_Recherche_par_titre"/>
+     <addaction name="action5_Recherche_livres_d_un_auteur_donn"/>
+     <addaction name="action6_Recherche_et_affichage_des_livres_par_ordre_alphab_tique"/>
+    </widget>
+    <addaction name="menuMise_jour"/>
+    <addaction name="menuRecherche_et_Affichage_2"/>
+    <addaction name="separator"/>
+   </widget>
+   <widget class="QMenu" name="menuGestion_des_emprunts">
+    <property name="title">
+     <string>Gestion des emprunts </string>
+    </property>
+    <widget class="QMenu" name="menuMise_jour_LOCATION">
+     <property name="title">
+      <string>Mise à jour LOCATION </string>
+     </property>
+     <widget class="QMenu" name="menuModifier_Emprunt">
+      <property name="title">
+       <string>Modifier Emprunt</string>
+      </property>
+      <addaction name="actionDate_emprunt"/>
+      <addaction name="actionDate_retour"/>
+     </widget>
+     <addaction name="actionAjouter_un_nouvel_emprunt"/>
+     <addaction name="actionRetour_d_un_emprunt"/>
+     <addaction name="actionSupprimer_d_un_emprunt"/>
+     <addaction name="menuModifier_Emprunt"/>
+    </widget>
+    <widget class="QMenu" name="menuRecherche_et_Affichage_3">
+     <property name="title">
+      <string>Recherche et Affichage </string>
+     </property>
+     <addaction name="actionContenu_du_dictionnaire_emprunt"/>
+     <addaction name="actionRecherche_emprunts_par_tudiant"/>
+     <addaction name="actionRecherche_livres_emprunt_s_une_date_donn_e"/>
+     <addaction name="actionRecherche_livres_retourn_s_une_date_donn_e"/>
+     <addaction name="actionRecherce_livres_entre_deux_dates_donn_es"/>
+     <addaction name="actionRecherche_livres_retourn_s_entre_deux_dates_donn_es"/>
+    </widget>
+    <addaction name="menuMise_jour_LOCATION"/>
+    <addaction name="menuRecherche_et_Affichage_3"/>
+   </widget>
+   <widget class="QMenu" name="menuEnregistrement_et_r_cup_ration_dans_fichier">
+    <property name="title">
+     <string>Enregistrement et récupération dans fichier</string>
+    </property>
+    <addaction name="actionEnregistrement_fichier_ETUDIANTS"/>
+    <addaction name="actionR_cup_ration_fichier_ETUDIANTS"/>
+    <addaction name="actionEnregistrement_fichier_LIVRES"/>
+    <addaction name="actionR_cuperation_fichier_LIVRE"/>
+    <addaction name="actionEnregistrement_fichier_EMPRUNTS"/>
+    <addaction name="actionR_cuperation_fichier_EMPRUNTS"/>
+   </widget>
+   <addaction name="menuACCEUIL"/>
+   <addaction name="menuGestion_des_tudiants"/>
+   <addaction name="menuGestion_des_livres"/>
+   <addaction name="menuGestion_des_emprunts"/>
+   <addaction name="menuEnregistrement_et_r_cup_ration_dans_fichier"/>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+  <action name="actionNew">
+   <property name="text">
+    <string>Ajouter un étudiant</string>
+   </property>
+  </action>
+  <action name="actionSuppression_tudiant_donn">
+   <property name="text">
+    <string>Suppression étudiant donné </string>
+   </property>
+  </action>
+  <action name="actionSuppression_des_tudiants_d_une_section_donn_e">
+   <property name="text">
+    <string>Suppression des étudiants d'une section donnée </string>
+   </property>
+  </action>
+  <action name="actionSuppression_des_tudiants_d_un_niveau_donn">
+   <property name="text">
+    <string>Suppression des étudiants d'un niveau donné </string>
+   </property>
+  </action>
+  <action name="actionT_l_phone">
+   <property name="text">
+    <string>Téléphone </string>
+   </property>
+  </action>
+  <action name="actionmail">
+   <property name="text">
+    <string>mail</string>
+   </property>
+  </action>
+  <action name="actionAdresse">
+   <property name="text">
+    <string>Adresse </string>
+   </property>
+  </action>
+  <action name="actionSuppression_des_tudiants_d_une_section_et_un_niveau">
+   <property name="text">
+    <string>Suppression des étudiants d'une section et un niveau </string>
+   </property>
+  </action>
+  <action name="action1_Contenu_du_dictionnaire_tudiants">
+   <property name="text">
+    <string>1-Contenu du dictionnaire étudiants </string>
+   </property>
+  </action>
+  <action name="action2_Recherche_par_num_ro_inscription">
+   <property name="text">
+    <string>2-Recherche par numéro inscription </string>
+   </property>
+  </action>
+  <action name="action3_Recherche_par_section">
+   <property name="text">
+    <string>3-Recherche par section </string>
+   </property>
+  </action>
+  <action name="action4_Recheche_par_section_et_niveau">
+   <property name="text">
+    <string>4-Recheche par section et niveau </string>
+   </property>
+  </action>
+  <action name="action5_Rcherche_par_niveau">
+   <property name="text">
+    <string>5-Rcherche par niveau </string>
+   </property>
+  </action>
+  <action name="actionAjouter_un_nouvel_livre">
+   <property name="text">
+    <string>Ajouter un nouvel livre </string>
+   </property>
+  </action>
+  <action name="actionModifier_nombre_d_exemplaires_d_un_livre">
+   <property name="text">
+    <string>Modifier nombre d'exemplaires d'un livre </string>
+   </property>
+  </action>
+  <action name="actionSuppression_livre_donn">
+   <property name="text">
+    <string>Suppression livre donné</string>
+   </property>
+  </action>
+  <action name="actionSuppression_livres_d_un_auteur_donn">
+   <property name="text">
+    <string>Suppression livres d'un auteur donné</string>
+   </property>
+  </action>
+  <action name="actionSuppression_livres_d_une_ann_e_donn_e">
+   <property name="text">
+    <string>Suppression livres d'une année donnée </string>
+   </property>
+  </action>
+  <action name="action1_Contenu_du_dictionnaire_LIVRE">
+   <property name="text">
+    <string>1-Contenu du dictionnaire LIVRE  </string>
+   </property>
+  </action>
+  <action name="action2_Recherche_par_R_f_rence">
+   <property name="text">
+    <string>2-Recherche par Référence</string>
+   </property>
+  </action>
+  <action name="action3_Recherche_par_titre">
+   <property name="text">
+    <string>3-Recherche par titre </string>
+   </property>
+  </action>
+  <action name="action4_Recherche_par_titre">
+   <property name="text">
+    <string>4-Recherche livres par année édition donnée </string>
+   </property>
+  </action>
+  <action name="action5_Recherche_livres_d_un_auteur_donn">
+   <property name="text">
+    <string>5-Recherche livres d'un auteur donné</string>
+   </property>
+  </action>
+  <action name="action6_Recherche_et_affichage_des_livres_par_ordre_alphab_tique">
+   <property name="text">
+    <string>6-Recherche et affichage des livres par ordre alphabétique</string>
+   </property>
+  </action>
+  <action name="actionAjouter_un_nouvel_emprunt">
+   <property name="text">
+    <string>Ajouter un nouvel emprunt </string>
+   </property>
+  </action>
+  <action name="actionRetour_d_un_emprunt">
+   <property name="text">
+    <string>Retour d'un emprunt </string>
+   </property>
+  </action>
+  <action name="actionSupprimer_d_un_emprunt">
+   <property name="text">
+    <string>Supprimer d'un emprunt </string>
+   </property>
+  </action>
+  <action name="actionDate_emprunt">
+   <property name="text">
+    <string>Date emprunt </string>
+   </property>
+  </action>
+  <action name="actionDate_retour">
+   <property name="text">
+    <string>Date retour </string>
+   </property>
+  </action>
+  <action name="actionContenu_du_dictionnaire_emprunt">
+   <property name="text">
+    <string>Contenu du dictionnaire emprunt </string>
+   </property>
+  </action>
+  <action name="actionRecherche_emprunts_par_tudiant">
+   <property name="text">
+    <string>Recherche emprunts par étudiant </string>
+   </property>
+  </action>
+  <action name="actionRecherche_livres_emprunt_s_une_date_donn_e">
+   <property name="text">
+    <string>Recherche livres empruntés à une date donnée</string>
+   </property>
+  </action>
+  <action name="actionRecherche_livres_retourn_s_une_date_donn_e">
+   <property name="text">
+    <string>Recherche livres retournés à une date donnée</string>
+   </property>
+  </action>
+  <action name="actionRecherce_livres_entre_deux_dates_donn_es">
+   <property name="text">
+    <string>Recherce livres empruntés entre deux dates données </string>
+   </property>
+  </action>
+  <action name="actionRecherche_livres_retourn_s_entre_deux_dates_donn_es">
+   <property name="text">
+    <string>Recherche livres retournés entre deux dates données </string>
+   </property>
+  </action>
+  <action name="actionEnregistrement_fichier_ETUDIANTS">
+   <property name="text">
+    <string>Enregistrement fichier ETUDIANTS </string>
+   </property>
+  </action>
+  <action name="actionR_cup_ration_fichier_ETUDIANTS">
+   <property name="text">
+    <string>Récupération fichier ETUDIANTS </string>
+   </property>
+  </action>
+  <action name="actionEnregistrement_fichier_LIVRES">
+   <property name="text">
+    <string>Enregistrement fichier LIVRES </string>
+   </property>
+  </action>
+  <action name="actionR_cuperation_fichier_LIVRE">
+   <property name="text">
+    <string>Récuperation fichier LIVRE </string>
+   </property>
+  </action>
+  <action name="actionEnregistrement_fichier_EMPRUNTS">
+   <property name="text">
+    <string>Enregistrement fichier EMPRUNTS </string>
+   </property>
+   <property name="shortcut">
+    <string>O</string>
+   </property>
+  </action>
+  <action name="actionR_cuperation_fichier_EMPRUNTS">
+   <property name="text">
+    <string>Récuperation fichier EMPRUNTS </string>
+   </property>
+  </action>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
